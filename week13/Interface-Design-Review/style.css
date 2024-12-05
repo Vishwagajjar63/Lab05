@@ -1,0 +1,251 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #002855;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00bfa5;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.nav-left a,
+.nav-right a {
+    margin: 0 10px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./img/1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 20px; /* Ensure padding inside the hero section */
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content .down-arrow {
+    font-size: 24px;
+    animation: bounce 1.5s infinite;
+}
+
+/* Padding between Hero and Content */
+.hero + .content {
+    margin-top: 40px; /* Adds spacing between hero and content */
+}
+
+/* Content Section */
+.content {
+    background-color: #002855;
+    color: white;
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin: 0 auto 20px;
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.content .images {
+    display: flex;
+    justify-content: center;
+
+}
+
+.content .images img {
+    width: 50%;
+}
+
+.content .images .img1 {
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+}
+
+.content .images .img2 {
+    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Video Section */
+.video {
+    background-color: #000;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video .play-button {
+    color: white;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+    background-color: hsl(188, 100%, 76%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact .svg-button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.contact .svg-button:hover {
+    background-color: white;
+    color: #00bfa5;
+}
+
+/* Form Section */
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002855;
+    padding: 40px 20px; /* Added padding */
+}
+
+/* Form Container Styling */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes the layout responsive */
+}
+
+/* Logo Styling */
+.form-logo img {
+    width: 150px; /* Adjust the width of the logo */
+    height: auto;
+}
+
+/* Form Styling */
+.form-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 400px; /* Limit form width */
+}
+
+.form-content input,
+.form-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-content button {
+    padding: 10px;
+    background-color: #0078D7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-content button:hover {
+    background-color: #005fa3;
+}
+.name{
+padding: 1px;
+background-color: hsl(0, 0%, 0%);
+color: #ffffff;
+justify-items: center;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    .content .images {
+        flex-direction: column;
+    }
+
+    .form-container {
+        flex-direction: column; /* Stacks logo and form vertically on smaller screens */
+        align-items: center;
+    }
+
+    .form-content form {
+        max-width: 100%; /* Allow form to stretch in smaller viewports */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .content h2 {
+        font-size: 22px;
+    }
+
+    .contact h2 {
+        font-size: 22px;
+    }
+}
